@@ -1,7 +1,23 @@
-#cs1300-gallery {
+body {
+  width: 100%;
   background-color: lightblue;
 }
 
+#cs1300-gallery {
+  font-family: Poppins;
+}
+
+#cs1300-gallery h1 {
+  font-family: Poppins-SemiBold;
+  /* margin-left: 2rem; */
+  display: flex;
+  justify-content: center;
+}
+
+#cs1300-gallery p {
+  display: flex;
+  justify-content: center;
+}
 /* Uncomment below if images are way too big.
 Selects all image tags and makes them 500px;
  */
@@ -11,4 +27,38 @@ Selects all image tags and makes them 500px;
 
 .gallery-container {
   /* TODO add styles (hint: use flex!) https://www.w3schools.com/cssref/ */
+  font-family: Poppins;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0px 17em
+}
+
+.gallery-container img {
+  padding: 35px;
+  border-radius: 80px;
+  /* width: 20%; */
+  width: 17em;
+  height: 17em;
+}
+@keyframes shake {
+  25% {
+    transform: rotate(-12deg);
+}
+50% {
+    transform: rotate(12deg);
+}
+75% {
+    transform: rotate(-12deg);
+}
+}
+
+
+.gallery-container img:hover {
+  padding: 35px;
+  border-radius: 80px;
+  /* width: 20%; */
+  animation: shake .5s ease-in-out;
+  
 }
